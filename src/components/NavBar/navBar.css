@@ -1,0 +1,38 @@
+
+.normal-header{
+    position: static;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150;
+    margin: auto;
+    font-size: 15px;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.header-img{
+    width: 100px;
+    margin-left: 10%;
+}
+
+.nav-bar ul{
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar li{
+    padding: 20px;
+    margin: 4px;
+}
+
+.nav-bar a:hover{
+    color: #c2ff05;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
