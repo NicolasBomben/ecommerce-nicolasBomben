@@ -6,10 +6,10 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./views/Home/Home";
 import Products from "./views/Products/Products";
 import Product from "./views/Product/Product";
-//import Category from "./views/Category/Category";
-//CAMBIO CATEGORY PARA PASAR DIRECTAMENTE EL COMPONENTE ITEM LIST YA QUE NO ME RENDERIZA LAS IMAGENES.
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import Cart from "./components/Cart/Cart";
+import Category from "./views/Category/Category";
+import Cart from "./views/Cart/Cart";
+
+//import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 
 import "./styles/resetApp.css";
@@ -35,7 +35,7 @@ function App() {
           <Route
             exact
             path="/category/:categoryId"
-            element={<ItemListContainer />}
+            element={<Category />}
           />
           <Route
             exact

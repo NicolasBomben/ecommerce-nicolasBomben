@@ -1,5 +1,5 @@
 
-/*import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
+import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 import { useParams } from "react-router-dom";
 
 const Category = () => {
@@ -14,4 +14,4 @@ const Category = () => {
     );
 };
 
-export default Category;*/
+export default Category;

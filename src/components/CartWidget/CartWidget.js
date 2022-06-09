@@ -1,5 +1,6 @@
 
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
 //img del cart
@@ -13,7 +14,7 @@ const CartWidget = () => {
 
   return (
     <div>
-        <img src={cartImg}  alt="cart" className="img-cart"/>
+        <Link to="/cart"><img src={cartImg}  alt="cart" className="img-cart"/></Link>
         <span className="cart-notification">
           {itemsCart()}
         </span>

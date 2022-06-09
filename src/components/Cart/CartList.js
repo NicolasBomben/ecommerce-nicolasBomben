@@ -5,7 +5,6 @@ const CartList = () => {
   
   const {  deleteFromCart, isInCart, cart, getTotal } = useContext(CartContext);
     
-
   return (
     <div>
       <h1>Carrito de compras</h1>
@@ -48,7 +47,6 @@ const CartList = () => {
             </tr>
           ))}
           <tr>
-            <td >Cant.Unidades:</td>
             <td >{isInCart()}</td>
             <td></td>
             <td >TOTAL COMPRA</td>

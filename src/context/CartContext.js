@@ -12,7 +12,7 @@ const CartProvider = ({children}) => {
     const [ cart, setCart ] = useState([]);
 
 
-    //funcion para añadir al carro
+    //funcion para añadir al carrito
     const addToCart = (item, count) => {
         if(isInCart(item.id)){
             const newCart = cart.map(cartItem => {
@@ -28,32 +28,13 @@ const CartProvider = ({children}) => {
         }
     };
 
-
-    //funcion para remover un item del carro
-    const removeFromCart = (id) => {
-        if(isInCart(id)){
-            const newCart = cart.filter((cartItem) => cartItem.id !== id);
-            setCart(newCart);
-        }else{
-            const newCart = cart.map((cartItem) => {
-                if (cartItem.id === id) {
-                  cartItem.quantity--;
-                }
-                return cartItem;
-              });
-              setCart(newCart);
-        }  
-        };
-    
-    
-
     
     //funcion para sumar las unidades del carrito
     const itemsCart = () => {
         return cart.reduce((prev, next) => prev + next.quantity, 0);
     }
 
-    //funcion para comprobar si ese item por id esta en el carro
+    //funcion para comprobar si ese item por id esta en el carrito
     const isInCart = (id) => {
         return cart.find(item => item.id === id)
     };
@@ -73,19 +54,34 @@ const CartProvider = ({children}) => {
         setCart([]);
     };
 
-    //retorno provider con funciones para utilizar y el cart del state.
+    //retorno provider con funciones para utilizar y el estado(cart).
     return(
         <Provider value={{
             addToCart,
-            removeFromCart,
-            deleteAll,
             itemsCart,
             isInCart,
             getTotal,
             deleteFromCart,
+            deleteAll,
             cart
         }}>{children}</Provider>
     );
 };
 
 export { CartContext, CartProvider}
+
+//funcion para remover un item del carro
+    /*const removeFromCart = (id) => {
+        if(isInCart(id)){
+            const newCart = cart.filter((cartItem) => cartItem.id !== id);
+            setCart(newCart);
+        }else{
+            const newCart = cart.map((cartItem) => {
+                if (cartItem.id === id) {
+                  cartItem.quantity--;
+                }
+                return cartItem;
+              });
+              setCart(newCart);
+        }  
+        };*/

@@ -17,9 +17,7 @@ const Cart = () => {
           <Link to="/products">
             <button>Seguir comprando</button>
           </Link>
-
           <button>Finalizar compra</button>
-
           <button
             onClick={() => {
               deleteAll();

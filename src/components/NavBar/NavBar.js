@@ -13,9 +13,9 @@ function navBar() {
           <ul>
             <li><Link to="/">HOME</Link></li>
             <li><Link to="/products">PRODUCTS</Link></li>
-            <li><Link to="/category/1">T-SHIRTS</Link></li>
-            <li><Link to="/category/3">PANTS</Link></li>
-            <li><Link to="/category/2">ACCESORIES</Link></li>
+            <li><Link to="/category/remeras">T-SHIRTS</Link></li>
+            <li><Link to="/category/pantalones">PANTS</Link></li>
+            <li><Link to="/category/accsesorios">ACCESORIES</Link></li>
           </ul>
         </nav>
         <CartWidget/>

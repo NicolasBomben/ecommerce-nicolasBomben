@@ -8,7 +8,7 @@ const Product = () => {
 
     return(
         <div>
-            <ItemDetailContainer itemId={ +itemId }/>
+            <ItemDetailContainer itemId={ itemId }/>
         </div>
         
     );
