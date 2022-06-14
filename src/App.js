@@ -8,6 +8,8 @@ import Products from "./views/Products/Products";
 import Product from "./views/Product/Product";
 import Category from "./views/Category/Category";
 import Cart from "./views/Cart/Cart";
+import CheckOut from "./views/CheckOut/CheckOut";
+
 
 //import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
@@ -41,6 +43,11 @@ function App() {
             exact
             path="/cart"
             element={<Cart />}
+          />
+          <Route
+            exact
+            path="/checkout"
+            element={<CheckOut/>}
           />
         </Routes>
         <Footer/>

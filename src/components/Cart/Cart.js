@@ -4,8 +4,12 @@ import { CartContext } from "../../context/CartContext";
 import CartList from "./CartList";
 import CartEmpty from "./CartEmpty";
 
+
 const Cart = () => {
   const { itemsCart, deleteAll } = useContext(CartContext);
+
+  
+
 
   return (
     <>
@@ -17,7 +21,10 @@ const Cart = () => {
           <Link to="/products">
             <button>Seguir comprando</button>
           </Link>
-          <button>Finalizar compra</button>
+
+          <Link to="/checkout">
+            <button>Finalizar compra</button>
+          </Link>
           <button
             onClick={() => {
               deleteAll();
