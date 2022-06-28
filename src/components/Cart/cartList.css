@@ -1,0 +1,21 @@
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+table{
+    width: 80%;
+}
+thead{
+    background-color: #c2ff05;
+}
+th,td{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+tbody{
+    background-color: #ede9e8;
+}

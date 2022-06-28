@@ -5,8 +5,7 @@ import { CartContext } from '../../context/CartContext';
 
 //img del cart
 import cartImg from '../../assets/img/shopping-cart.png';
-//estilo
-import './cartWidget.css';
+
 
 const CartWidget = () => {
 

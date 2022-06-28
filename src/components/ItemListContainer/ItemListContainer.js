@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
 import { getFirestore, getDocs, collection, query, where} from "firebase/firestore"
 
-//estilo
-import './itemListContainer.css';
+
 
 const ItemListContainer = ({categoryId}) => {
 

@@ -69,31 +69,33 @@ const CartForm = () => {
   return (
     <div show={showForm}>
       <form onSubmit={handleSubmit}>
-        <h1>Checkout</h1>
+        <h1>CHECK OUT</h1>
         <input
           type="text"
           name="name"
-          placeholder="Name"
+          placeholder="Ingresa tu Nombre"
           onChange={handleChange}
         />
         <input
           type="email"
           name="email"
-          placeholder="Email"
+          placeholder="Ingresa tu Email"
           onChange={handleChange}
         />
         <input
           type="phone"
           name="phone"
-          placeholder="Phone"
+          placeholder="Ingresa tu Telefono"
           onChange={handleChange}
         />
         {formData.name !== "" && formData.email !== "" && formData.phone !== "" ?(
-          <button type='submit'>
+          <button className="cart-btn"type='submit'>
           Generar Compra
         </button>
         ) : (
-          <></>
+          <>
+          <span className='cart-span'>Completa tus datos para generar la compra</span>
+          </>
         )}
       </form>
       <div>
@@ -112,11 +114,11 @@ const CartForm = () => {
         ) : (
           <>
             <Fade left opposite cascade>
-                <Modal.Body className="bg-danger text-center text-white fw-normal">
+                <Modal.Body className="bg-danger text-center text-white fw-normal cart-span">
                   {`La Orden se generó correctamente, muchas GRACIAS por su Compra!!! Para seguimiento de la misma tome nota del siguiente Número: ${orderId}`}
                 </Modal.Body>
               </Fade>
-            <Link to="/"><button onClick={handleClose}>Close</button></Link>
+            <Link to="/"><button  className="cart-btn"onClick={handleClose}>Close</button></Link>
           </>
         ))
         }

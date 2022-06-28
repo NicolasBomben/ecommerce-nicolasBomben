@@ -2,7 +2,7 @@
 const Home = () => {
 
     return(
-        <div>
+        <div className="home-container">
             <h1>Bienvenidos A Grotesca</h1>
             <p>En la seccion products podras ver todos nuestros productos</p>
         </div>

@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
+
 const CartList = () => {
   
   const {  deleteFromCart, isInCart, cart, getTotal } = useContext(CartContext);
     
   return (
-    <div>
-      <h1>Carrito de compras</h1>
+    <div className="cart-table-container">
       <table>
         <thead>
           <tr>
-            <th>Id.</th>
+            <th>Producto</th>
             <th>Cantidad</th>
             <th>Descripción</th>
             <th>Precio Unit</th>
@@ -43,7 +43,7 @@ const CartList = () => {
                   style: "currency",
                 }).format(prod.quantity * prod.precio)}
               </td>
-              <td> <button onClick={() => deleteFromCart(prod.id)}>Eliminar Producto</button></td>
+              <td> <button className="cart-btn" onClick={() => deleteFromCart(prod.id)}>Eliminar Producto</button></td>
             </tr>
           ))}
           <tr>

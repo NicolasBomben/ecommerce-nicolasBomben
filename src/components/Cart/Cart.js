@@ -5,10 +5,9 @@ import CartList from "./CartList";
 import CartEmpty from "./CartEmpty";
 
 
+
 const Cart = () => {
   const { itemsCart, deleteAll } = useContext(CartContext);
-
-  
 
 
   return (
@@ -16,16 +15,17 @@ const Cart = () => {
       {itemsCart() === 0 ? (
         <CartEmpty />
       ) : (
-        <div>
+        <div className="cart-btn-container">
           <CartList />
           <Link to="/products">
-            <button>Seguir comprando</button>
+            <button className="cart-btn">Seguir comprando</button>
           </Link>
 
           <Link to="/checkout">
-            <button>Finalizar compra</button>
+            <button className="cart-btn">Finalizar compra</button>
           </Link>
           <button
+            className="cart-btn"
             onClick={() => {
               deleteAll();
             }}

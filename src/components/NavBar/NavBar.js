@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget'
-import "./navBar.css";
 import logo from '../../assets/img/logoGrotesca.png';
 
 function navBar() {

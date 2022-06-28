@@ -3,8 +3,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
-//estilo
-import "./itemDetail.css";
+
 
 const ItemDetail = ({item = []}) => {
   
@@ -15,19 +14,18 @@ const ItemDetail = ({item = []}) => {
   const [ count, setCount ] = useState(1);
 
   return (
-    <div className="container-cards">
-      <div className="card">
-        <div className="image-container">
-          <img src={item.imagenURL} alt=" " className="card-image" />
+    <div className="item-detail-container-cards">
+      <div className="item-detail-card">
+        <div className="item-detail-image-container">
+          <img src={item.imagenURL} alt=" " className="item-detail-card-image" />
         </div>
-        <div className="card-description">
+        <div className="item-detail-card-description">
           <h3>{item.nombre}</h3>
           <h4>{item.precio}</h4>
-          <p>{item.talle}</p>
         </div>
       </div>
       {isInCart(item.id) ? (
-        <Link to="/cart"><button>Terminar Compra</button></Link>
+        <Link to="/cart"><button className="item-detail-btn">Terminar Compra</button></Link>
       ) : (
         <ItemCount
           onSubmit={() => addToCart(item, count)}

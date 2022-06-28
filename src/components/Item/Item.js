@@ -1,21 +1,21 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import './item.css';
+
 
 const Item = ({items}) => {
 
   const navigate = useNavigate();
 
     return(
-        <div className="container">
-          <div className="card">
-            <div className="image-container">
-                <img src={items.imagenURL}  alt=" " className="card-image"/>
+        <div className="item-container">
+          <div className="item-card">
+            <div className="item-image-container">
+                <img src={items.imagenURL}  alt=" " className="item-card-image"/>
             </div>
-            <div className="card-description">
+            <div className="item-card-description">
               <h3>{items.nombre}</h3>
-              <button className="btn" onClick={() => navigate(`/item/${items.id}`)}>VER MAS</button>
+              <button className="item-btn" onClick={() => navigate(`/item/${items.id}`)}>VER MAS</button>
             </div>
         </div>
         </div>

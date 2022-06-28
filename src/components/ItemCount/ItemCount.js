@@ -1,8 +1,7 @@
 import React from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 
-//estilo
-import './itemCount.css';
+
 
 //recibo por params desde el contenedor padre ItemDetail.
 const ItemCount = ({ count, setCount, stock, onSubmit}) => {
@@ -24,10 +23,10 @@ const ItemCount = ({ count, setCount, stock, onSubmit}) => {
 
   return (
     <div className="count-container">
-        <button className="btn" onClick={ handleDecrease }> - </button>
+        <button className="count-btn" onClick={ handleDecrease }> - </button>
         <span className='span'> {count} </span>
-        <button className="btn" onClick={ handleAdd }> + </button>
-        <button className="btn-agregar" onClick={ onSubmit }>Agregar al Carrito</button>
+        <button className="count-btn" onClick={ handleAdd }> + </button>
+        <button className="count-btn-agregar" onClick={ onSubmit }>Agregar al Carrito</button>
     </div>
   );
 };

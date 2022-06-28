@@ -20,14 +20,3 @@ export const ItemDetailContainer = ({ itemId }) => {
 
   return <ItemDetail item={item} />;
 };
-
-
-
-
-
-//codigo viejo para traer un item
-/*useEffect(() => {
-    setTimeout(() => {
-      setItem(products.find((item) => item.id === itemId));
-    }, 2000);
-  }, [itemId]);*/

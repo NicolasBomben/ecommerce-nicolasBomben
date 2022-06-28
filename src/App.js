@@ -14,7 +14,7 @@ import CheckOut from "./views/CheckOut/CheckOut";
 //import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 
-import "./styles/resetApp.css";
+import "./styles/app.css";
 
 function App() {
   return (
