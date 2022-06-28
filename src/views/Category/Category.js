@@ -8,7 +8,6 @@ const Category = () => {
    
     return(
         <div>
-            <h1>Productos</h1>
             <ItemListContainer categoryId={categoryId}/>
         </div>
     );
